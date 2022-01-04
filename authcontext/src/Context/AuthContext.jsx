@@ -14,7 +14,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const handleLogin = (username) => {
     setIsAuth(true);
-    setToken(nanoid(10) + " " + username);
+    setToken(nanoid(10) + " username is " + username);
   };
   const value = { isAuth, isTog, token, handleLogin, handleToggleAuth };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
